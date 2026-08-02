@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #F0FDF4;
+  --color-surface-container-lowest: #FFFFFF;
+  --color-surface-container-low: #DCFCE7;
+
+  --color-on-surface: #052E16;
+
+  --color-outline-variant: #86EFAC;
+
+  --color-primary: #16A34A;
+  --color-on-primary: #FFFFFF;
+  --color-primary-container: #BBF7D0;
+  --color-on-primary-container: #14532D;
+
+  --color-secondary: #22C55E;
+  --color-on-secondary: #FFFFFF;
+  --color-secondary-container: #DCFCE7;
+  --color-on-secondary-container: #166534;
+
+  --color-error: #DC2626;
+  --color-on-error: #FFFFFF;
+  --color-error-container: #FEE2E2;
+  --color-on-error-container: #991B1B;
+
+  /* Fonts */
+  --font-display: "Playfair Display", serif;
+  --font-body: "Outfit", sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+ background:
+    radial-gradient(circle at top left,#dbeafe 0%,transparent 35%),
+    radial-gradient(circle at bottom right,#ede9fe 0%,transparent 35%),
+    #fafafa;
+    color: var(--color-on-surface);
+}
+
+/* Custom Design Utilities */
+.ambient-shadow {
+   box-shadow:
+        0 20px 50px rgba(0,0,0,.06),
+        0 4px 20px rgba(124,58,237,.08);
+}
+
+.transition-soft {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover-effect {
+  /* transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1); */
+  background:white;
+  border:1px solid rgba(0,0,0,.05);
+  border-radius:20px;
+  transition:.35s ease;
+}
+
+.card-hover-effect:hover {
+  transform:translateY(-6px);
+  box-shadow: 0 25px 60px rgba(124,58,237,.12);
+}
+
+/* Custom Scrollbar for premium visual */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f9f9f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dadada;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a059;
+}
