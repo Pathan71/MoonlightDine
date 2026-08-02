@@ -16,7 +16,7 @@ await connectDB()
 
 // Middleware
 app.use(cors({
-    origin: "https://moonlightdine.netlify.app/",
+    origin: "https://moonlightdine.netlify.app",
     credentials: true
 }))
 app.use(express.json())
