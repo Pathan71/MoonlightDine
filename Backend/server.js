@@ -15,7 +15,10 @@ const app = express()
 await connectDB()
 
 // Middleware
-app.use(cors())
+app.use(cors({
+    origin: "https://moonlightdine.netlify.app/",
+    credentials: true
+}))
 app.use(express.json())
 
 const port = process.env.PORT || 3000;
